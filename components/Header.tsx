@@ -8,7 +8,7 @@ export async function Header() {
   return (
     <header className="header">
       <div className="wrap header__inner">
-        <Link href={email ? "/library" : "/"} className="wordmark" aria-label="Adept Advisors — The Library">
+        <Link href={email ? "/library" : "/"} className="wordmark" aria-label="Adept Advisors, The Library">
           <span className="diamond" aria-hidden="true" />
           <span>
             ADEPT <span className="wordmark__accent">ADVISORS</span>
