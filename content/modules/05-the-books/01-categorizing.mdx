@@ -1,0 +1,52 @@
+---
+title: "Categorizing a month of transactions"
+summary: "Getting a bank export sorted into your chart of accounts in minutes, with the tool flagging the ones it isn't sure about instead of guessing."
+minutes: 10
+order: 1
+---
+
+## The tedious part of the books
+
+Categorizing transactions is not hard. It is repetitive, it piles up, and it is the reason the books are three months behind. It is also almost perfectly suited to a language model: a list of descriptions, a list of categories you define, and a rule for what to do when unsure.
+
+## What you need
+
+Two things. An export of transactions from your bank or accounting tool (CSV is ideal; a pasted table works). And your category list: the chart of accounts you actually use, with a one-line description of what goes in each. If you have never written those descriptions down, that is the exercise, and your bookkeeper will thank you.
+
+## The recipe
+
+<Prompt title="Categorize transactions">
+Here is my business brief: [paste]
+
+Here is my category list, with what belongs in each:
+[paste, e.g. "Fuel: gas for the trucks, not personal. Materials: anything installed at a customer's. Meals: only meals with customers or crew on a job day. Owner draw: transfers to my personal account."]
+
+Rules I've learned: [paste any, e.g. "Home Depot is Materials unless under $40, then Small tools."]
+
+Below is a list of transactions (date, description, amount). For each one, give me: the transaction, your category, and a confidence of High, Medium, or Low. For anything Low, say in a few words what you would need to know. Do not invent categories that aren't on my list. Personal-looking transactions go under "Ask Aaron."
+
+Output as a table I can paste into a spreadsheet, then a short list of the Low-confidence ones.
+
+Transactions:
+[paste]
+</Prompt>
+
+<Callout kind="warn">
+Bank exports contain account numbers and sometimes personal purchases. Strip the account number column before pasting, and decide (Module 6) whether you paste the full month or only the business account. The tool does not need the account number to categorize.
+</Callout>
+
+## What you do with the output
+
+Paste the table next to your export. Review the Lows first; they are usually five to ten out of a couple hundred. Skim the Mediums. Trust the Highs, and spot check a few. Then import or enter the categories into your accounting tool the way you normally would. The tool does not touch your books; it hands you the answers.
+
+## It gets better every month
+
+Every time you correct a categorization, add a line to "Rules I've learned." "Amazon is Office supplies unless over $200, then ask." After three months the rules paragraph is the most valuable document in your accounting folder, because it is your bookkeeping policy, written down, in a form both a person and a tool can follow.
+
+<Worksheet title="Categorize last month">
+- Export last month's business transactions. Remove the account number column.
+- Write your category list with one-line descriptions. Keep it under twenty categories.
+- Run the recipe. Review the Lows, then the Mediums.
+- Count how many the tool got wrong among the Highs. If it is more than a handful, your descriptions need work, not the tool.
+- Add three rules you learned to the recipe and save it.
+</Worksheet>
