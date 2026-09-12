@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: { default: "The Adept Library", template: "%s · The Adept Library" },
   description:
     "Written lessons in practical AI literacy for owner-operators. Included with Advisor on Call from Adept Advisors.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
 };
 
 const FONTS_HREF =
