@@ -8,7 +8,7 @@ import { signOutAction } from "@/lib/actions";
 export const metadata: Metadata = { title: "Account" };
 
 const fmt = (d: Date | null | undefined) =>
-  d ? d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "—";
+  d ? d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "n/a";
 
 export default async function AccountPage() {
   const email = await currentEmail();
