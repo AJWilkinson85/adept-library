@@ -1,0 +1,49 @@
+---
+title: "How to tell when it's wrong"
+summary: "The four ways a model fails, what each one looks like on the page, and a thirty-second check that catches most of them."
+minutes: 9
+order: 2
+---
+
+## Four kinds of wrong
+
+Once you know the shapes, you spot them fast.
+
+**Invented specifics.** A phone number, a statute, a product SKU, a percentage, a quote attributed to someone. Models produce these with the same confidence as everything else. Rule: any specific you did not give it is unverified until you check it.
+
+**Confident arithmetic.** Ask it to total a list of twelve line items and it will often be off, sometimes by a little, sometimes by a digit. It is a language machine, not a calculator. Rule: numbers get recomputed in a spreadsheet or the tool's calculator feature if it has one.
+
+**The reasonable-sounding default.** You ask about your situation; it answers about the average situation. The advice is fine for a generic business and wrong for yours because it does not know that your customers pay net-60 or that you are the only licensed installer in the county. Rule: if you did not tell it, it does not know.
+
+**Agreeable drift.** Push back and it will often cave, even when it was right. "Are you sure?" is not a good test of truth. Rule: ask it to argue the other side instead, and judge the arguments yourself.
+
+<Callout kind="warn">
+The failures that cost money are almost never the obvious ones. They are the quiet, plausible ones that make it into an email or a quote. That is why the check below is a habit, not an occasional thing.
+</Callout>
+
+## The thirty-second check
+
+Before anything the model wrote leaves your hands, read it once asking three questions:
+
+1. What in here is a specific fact, number, or name? Did I give it that, or did it produce it?
+2. What in here is a commitment? A price, a date, a promise, a "we always" or "we never"?
+3. Would I say this exact sentence out loud to this person?
+
+If a sentence fails any of the three, fix it or cut it. Most drafts need two or three edits. That is still faster than writing from scratch, which is the whole point.
+
+## Make it check itself
+
+A useful trick: ask the model to flag its own uncertainty before you read the draft.
+
+<Prompt title="Self-audit prompt (append to any drafting request)">
+After you write the draft, add a section called "Check these" that lists every specific fact, number, name, or commitment in the draft that I did not explicitly give you, so I can verify each one.
+</Prompt>
+
+This does not make the model more accurate. It makes the unverified parts visible, which is what you actually need.
+
+<Worksheet title="Find the failures">
+- Paste any email you have already sent to a customer into the tool and ask it to "rewrite this more professionally."
+- Run the thirty-second check on the rewrite. Mark every sentence that adds a fact, softens a commitment, or does not sound like you.
+- Count them. That number is your baseline; it goes down as you get better at the prompts in Module 2.
+- Try the self-audit prompt on the same request and compare the "Check these" list against what you found by hand.
+</Worksheet>

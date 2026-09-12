@@ -1,0 +1,45 @@
+---
+title: "What a model is"
+summary: "A working mental model of the thing you are typing into, good enough to predict when it will help and when it will make things up."
+minutes: 8
+order: 1
+---
+
+## The one-sentence version
+
+A language model is a very good guesser of what text should come next. That is the whole trick, and everything useful and everything frustrating about these tools follows from it.
+
+It has read an enormous amount of writing and learned the patterns: how an explanation is structured, how a polite email sounds, what usually follows "the three main risks are." When you type something, it continues the pattern. It is not looking anything up. It is not reasoning the way you reason about a job. It is producing the most plausible next chunk of text, one piece at a time.
+
+<Callout kind="note">
+"Plausible" is doing a lot of work in that sentence. The model is built to sound right, which is not the same as being right. Keep those two ideas separate and most of the surprises go away.
+</Callout>
+
+## Three things that follow
+
+**It is fluent before it is accurate.** A model will write a confident, well-formatted paragraph about your county's permit rules whether or not it knows them. Fluency is free; accuracy has to be checked. This is the single most important habit in this whole library: the better something reads, the more carefully you verify the parts that matter.
+
+**It only knows what you tell it, plus what it read.** It has never seen your price list, your customer, or your last three invoices unless you paste them in. When you give it that material, it gets dramatically better, because now it is continuing your pattern instead of the internet's. Module 2 is mostly about this.
+
+**It does not remember you between conversations** unless the product you are using has a memory feature turned on. Each new chat starts from zero. That is why we build reusable prompts instead of relying on the tool to "learn" your business.
+
+## What it is good at, for a business like yours
+
+Anything that is mostly language and mostly pattern: drafting, summarizing, rewriting in a different tone, turning messy notes into structure, categorizing things into buckets you define, explaining a document back to you, and producing a first version of almost anything written.
+
+## Where it will quietly let you down
+
+Math done in prose (it will make arithmetic errors and present them cleanly), specific facts about your area or industry, anything that changed recently, and anything with legal or contractual weight. None of these are off limits. They are the places you check.
+
+<Prompt title="Try this now: a calibration test">
+I run a [type of business] in [city]. Tell me three things you are confident about regarding how a business like mine operates, and three things you would need me to tell you before you could give useful advice. Be specific about what you don't know.
+</Prompt>
+
+Read the answer. The second list is the interesting one. That is the model telling you, accurately, what it is missing, and it is a preview of what you will feed it in the next module.
+
+<Worksheet title="Your calibration">
+- Run the prompt above with your real business type and city.
+- Write down one thing from the "confident" list that was actually wrong or generic.
+- Write down two things from the "need to know" list that you could paste in from a document you already have.
+- Keep both notes. You will use them in Module 2.
+</Worksheet>
