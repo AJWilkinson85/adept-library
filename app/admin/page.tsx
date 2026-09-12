@@ -9,7 +9,7 @@ import { grantAccess } from "@/lib/actions";
 export const metadata: Metadata = { title: "Admin" };
 
 const fmt = (d: Date | null) =>
-  d ? d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "—";
+  d ? d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "n/a";
 
 export default async function AdminPage({
   searchParams,
@@ -32,7 +32,7 @@ export default async function AdminPage({
       <span className="label label--accent">Admin</span>
       <h1>Grant access.</h1>
       <p className="lede">
-        Give someone Library access for a set number of days — for example, 90 days for a Working
+        Give someone Library access for a set number of days, for example, 90 days for a Working
         Session client. They sign in with this exact email.
       </p>
 
