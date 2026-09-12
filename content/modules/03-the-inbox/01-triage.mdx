@@ -1,0 +1,54 @@
+---
+title: "Triage: what needs you and what doesn't"
+summary: "Turning fifty unread messages into a short list of the ones that actually need a decision from you."
+minutes: 9
+order: 1
+---
+
+## The inbox problem is a sorting problem
+
+Most of what lands in a small business inbox does not need the owner. It needs a category and a standard response. The part that needs you is small, and it is buried. The first inbox workflow does nothing clever: it sorts.
+
+## The standard
+
+Before building this, decide what you would tell a new assistant on their first day. Something like: "Anything about money or a complaint comes to me today. Scheduling requests go to Dana. Vendor sales pitches get deleted. New inquiries get the intake reply and a note in the sheet." Write that down. That paragraph is the whole workflow; the tool just applies it.
+
+## The recipe
+
+Copy the subject and first few lines of each unread message into one block (most email clients let you select and copy a list view; or forward a batch to yourself and copy the digest). Then:
+
+<Prompt title="Inbox triage">
+Here is my business brief: [paste]
+
+My triage rules: [paste the paragraph you wrote above]
+
+Below are today's unread messages, one per line: sender, subject, and the first lines. Sort them into these buckets and list each message under its bucket with a one-line reason:
+1. NEEDS ME TODAY (money, complaints, anything with a deadline this week)
+2. DELEGATE (say to whom, based on my rules)
+3. STANDARD REPLY (name which standard reply fits)
+4. IGNORE OR DELETE
+
+Then give me the NEEDS ME list again, ordered by what to open first, with the single most important sentence from each message.
+
+[paste messages]
+</Prompt>
+
+The output is not the answer. It is a proposed sort. Skim it, move two things between buckets if it got them wrong, and you have your morning.
+
+<Callout kind="warn">
+Customer messages contain customer information. Before you paste, read Module 6 and decide what you are comfortable putting into the tool. Many businesses strip phone numbers and addresses and keep names; some paste everything; some paste only subject lines. Pick your line and write it into the recipe.
+</Callout>
+
+## Making it faster
+
+After a week, you will notice the same senders landing in the same buckets. Add them to the rules: "Anything from the county permit office goes to NEEDS ME." The rules paragraph grows, the sorting gets better, and eventually the tool is applying thirty rules you would have had to remember.
+
+If you use Gmail or Outlook with their built-in AI, you can ask the built-in feature to summarize a thread, which is useful for long ones. Leave the sorting to the recipe, where your rules live.
+
+<Worksheet title="Run one morning of triage">
+- Write your triage rules paragraph. Five to eight rules is enough to start.
+- Pick your privacy line: what gets pasted and what gets stripped. Write it into the recipe.
+- Run the triage prompt on one real morning's unread mail.
+- Count: how many messages actually needed you? That number is usually a relief.
+- Add the recipe to the prompt library with a CHECK line: "Confirm anything the tool put in IGNORE before deleting."
+</Worksheet>
