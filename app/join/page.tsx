@@ -24,7 +24,7 @@ export default async function JoinPage() {
         </div>
         <ul className="checklist">
           <li>Two office-hours calls a month with Aaron</li>
-          <li>Full access to the Adept Library — every module, every worksheet</li>
+          <li>Full access to the Adept Library: every module, every worksheet</li>
           <li>Email questions between calls</li>
           <li>Cancel any month from your account page</li>
         </ul>
