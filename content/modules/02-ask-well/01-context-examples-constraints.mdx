@@ -1,0 +1,63 @@
+---
+title: "Context, examples, constraints"
+summary: "The three ingredients that separate a mediocre paragraph from a draft you would actually send."
+minutes: 10
+order: 1
+---
+
+## Why "write me an email" gets you junk
+
+The model does exactly what you asked. "Write me an email declining a job" produces an email that declines a job: polite, generic, slightly too long, sounding like nobody in particular. You did not tell it who you are, who the customer is, why you are declining, or how you talk. So it guessed all four, and it guessed the average.
+
+Every good prompt in this library has the same three ingredients.
+
+## 1. Context: who, what, and what's going on
+
+Tell it what a new assistant would need on their first morning. Who you are, what the business does, who this message is going to, and what the situation is. Two or three sentences is usually enough.
+
+> I run a residential HVAC company in Mesa, eight technicians. This customer asked for a quote on a full system replacement, we quoted $14,200 two weeks ago, and they emailed today asking if we can "do better." We don't discount, but we can offer a financing option and a maintenance plan.
+
+Compare the email that comes from that to the one that comes from "write an email to a customer asking for a discount."
+
+## 2. Examples: show it your voice
+
+Paste in two or three things you actually wrote and liked. The model will match tone, length, sign-off, even the way you use punctuation. This is the highest-leverage move in the whole library, and almost nobody does it.
+
+> Here are two emails I sent last month that sound like me. Match this tone.
+> [paste]
+
+You do not need to describe your voice. Showing it works better than describing it.
+
+## 3. Constraints: what it must and must not do
+
+Length, format, things to include, things to never say. Be blunt.
+
+> Under 120 words. Do not apologize. Do not use the word "unfortunately." End with a specific next step and a question.
+
+<Callout kind="note">
+Most weak drafts are missing constraints, not context. If the answer is too long, too soft, or too salesy, the fix is usually one more line of "do not."
+</Callout>
+
+## The full pattern
+
+<Prompt title="The three-part draft">
+CONTEXT
+I run [business type] in [city], [size]. I'm writing to [who] about [situation]. What I want to happen: [outcome].
+
+EXAMPLES OF MY VOICE
+[Paste two short things you wrote and liked.]
+
+CONSTRAINTS
+Under [n] words. [Tone notes.] Do not [thing]. Do not [thing]. Include [specific thing]. End with [specific next step].
+
+Write the draft. Then add a "Check these" list of any fact, number, or commitment you included that I did not give you.
+</Prompt>
+
+That last line is the self-audit from Module 1. Keep it on everything.
+
+<Worksheet title="Rewrite one real message">
+- Find a message you sent this week that took you more than five minutes to write.
+- Fill in the three-part draft prompt for it, using two real examples of your voice.
+- Run it. Apply the thirty-second check. Count the edits.
+- Save the CONTEXT and EXAMPLES sections somewhere; the next lesson turns them into something reusable.
+</Worksheet>
