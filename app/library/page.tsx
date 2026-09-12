@@ -25,7 +25,7 @@ export default async function LibraryPage({
     <div className="wrap">
       {welcome && (
         <p className="notice notice--ok">
-          Welcome aboard. Your subscription is active — start with the first lesson below.
+          Welcome aboard. Your subscription is active. Start with the first lesson below.
         </p>
       )}
       <span className="label label--accent">The Adept Library</span>
