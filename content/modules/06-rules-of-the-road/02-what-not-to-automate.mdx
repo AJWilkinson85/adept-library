@@ -1,0 +1,47 @@
+---
+title: "What not to automate"
+summary: "The tasks where a human stays in the loop no matter how good the tool gets, and the simple test for deciding."
+minutes: 7
+order: 2
+---
+
+## The test
+
+Ask one question about any task: if the tool got this wrong and nobody caught it, what would it cost? If the answer is "an awkward email," automate freely. If the answer is "a customer," "a lawsuit," or "money we can't get back," a person reads it before it goes out. Every time. The tool can still do ninety percent of the work; the last ten percent is a human deciding to send.
+
+## Things a person always sends
+
+**Anything with a signature or legal weight.** Contracts, terms, warranty language, anything a customer could hold you to. The tool can draft; a person reads every word.
+
+**Anything with a price the customer has not seen.** A quote is a commitment. The recipe assembles it; you check the total and press send.
+
+**Complaints and anything emotional.** A customer who is upset can tell when a reply is generic. The draft helps you respond faster and calmer; it does not replace you reading their message.
+
+**Anything to an employee about their job.** Pay, performance, schedules that affect their life. Draft with the tool if it helps you find the words. Send as yourself.
+
+**Anything you would not want to explain later.** If you can imagine saying "the AI sent that," do not let it.
+
+<Callout kind="warn">
+The temptation grows as the tool gets better. The first month you check everything. By month three the drafts are good and checking feels unnecessary. That is exactly when the expensive mistake happens. The CHECK lines in your recipes exist for month three.
+</Callout>
+
+## Things that are fine to run with a light touch
+
+Sorting and summarizing (triage), first drafts of routine replies, categorizing transactions with a confidence flag, turning notes into structure, rewriting something you already wrote. In all of these, an error is cheap and visible. The check is a skim, not a read.
+
+## The rule for the office
+
+Two tiers, written down. "Tier 1: the tool drafts, a person skims and sends. Tier 2: the tool drafts, the owner or manager reads every word and sends." List which tasks are which. New tasks default to Tier 2 until someone decides otherwise.
+
+<Prompt title="Sort our tasks into tiers">
+Here is my business brief: [paste]
+
+Here are the tasks we currently use AI tools for, or plan to: [list them]. Sort each into Tier 1 (a person skims and sends) or Tier 2 (the owner or manager reads every word and sends), using this test: what would it cost if the tool got it wrong and nobody caught it? Explain each placement in one line. Then write the two-tier rule as a short paragraph for our prompt library.
+</Prompt>
+
+<Worksheet title="Write the tiers">
+- List every task where the tool currently produces something that leaves the building.
+- Run the tiers prompt. Argue with any placement you disagree with, then decide.
+- Add the two-tier paragraph to the prompt library under the data rule.
+- Mark each recipe in the library with its tier.
+</Worksheet>
