@@ -19,7 +19,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
         <h1>Link sent.</h1>
         <p className="lede">
           We emailed a sign-in link{email ? <> to <strong>{email}</strong></> : null}. It expires in 24
-          hours. If it does not arrive in a minute or two, check spam — and make sure you used the
+          hours. If it does not arrive in a minute or two, check spam, and make sure you used the
           email you subscribed or booked with.
         </p>
         <p>
