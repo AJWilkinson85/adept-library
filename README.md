@@ -11,7 +11,7 @@ auth.ts                      Auth.js config (Resend provider, Drizzle adapter)
 db/schema.ts                 Auth.js tables + memberships + progress
 db/index.ts                  Lazy Neon/Drizzle client
 drizzle/                     Generated SQL migrations
-lib/access.ts                getAccess(email) — the gating rule
+lib/access.ts                getAccess(email): the gating rule
 lib/stripe.ts                Lazy Stripe client + subscription -> membership sync
 lib/content.ts               Loads content/modules/** (modules, lessons, prev/next)
 lib/actions.ts               Server actions: magic link, sign out, progress, admin grant
@@ -39,7 +39,7 @@ npm run dev
 | `AUTH_SECRET` | `openssl rand -base64 32` |
 | `AUTH_URL` / `NEXTAUTH_URL` | `https://members.adeptadvisors.com` (Auth.js reads `AUTH_URL`; `NEXTAUTH_URL` is an alias) |
 | `AUTH_RESEND_KEY` | Resend API key |
-| `AUTH_EMAIL_FROM` | e.g. `Adept Advisors <hello@adeptadvisors.com>` — domain must be verified in Resend |
+| `AUTH_EMAIL_FROM` | e.g. `Adept Advisors <hello@adeptadvisors.com>`; domain must be verified in Resend |
 | `STRIPE_SECRET_KEY` | Stripe secret key (`sk_live_...` / `sk_test_...`) |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret of the webhook endpoint below |
 | `STRIPE_PRICE_ADVISOR` | Price ID of the $600/mo Advisor on Call subscription |
