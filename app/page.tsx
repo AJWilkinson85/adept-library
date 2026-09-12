@@ -17,7 +17,7 @@ export default async function Home() {
           <span className="label label--accent">The Adept Library</span>
           <h1>Practical AI literacy, written down.</h1>
           <p className="lede">
-            Short, plain-language lessons for owner-operators who want to use AI tools well —
+            Short, plain-language lessons for owner-operators who want to use AI tools well,
             without the hype, and without handing the keys to a vendor. The Library is included
             with <strong>Advisor on Call</strong>.
           </p>
@@ -50,8 +50,8 @@ export default async function Home() {
           </div>
         </div>
         <p className="muted" style={{ marginTop: "2rem" }}>
-          Already a Working Session client? Your 90 days of access is granted by Aaron —{" "}
-          <Link href="/login">sign in</Link> with the email you booked with.
+          Already a Working Session client? Your 90 days of access is granted by Aaron.{" "}
+          <Link href="/login">Sign in</Link> with the email you booked with.
         </p>
       </section>
     </>
