@@ -14,7 +14,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: { strategy: "database" },
   providers: [
     Resend({
-      from: process.env.AUTH_EMAIL_FROM ?? "Adept Advisors <hello@adeptadvisors.com>",
+      from: process.env.AUTH_EMAIL_FROM || "Adept Advisors <hello@adeptadvisors.com>",
     }),
   ],
   pages: { signIn: "/login", verifyRequest: "/login?sent=1" },
