@@ -1,0 +1,42 @@
+---
+title: "Building the week from the job list"
+summary: "Take the jobs, the people, the constraints, and the drive times, and get a draft week you can argue with instead of a blank calendar."
+minutes: 10
+order: 1
+---
+
+## The Sunday night problem
+
+You have fourteen jobs, three people, two vans, a customer who can only do Thursday morning, and a part that arrives Wednesday. Every week you solve this in your head, badly, and then re-solve it on Tuesday. The tool cannot know your business, but it can hold all fourteen constraints at once, which your head cannot at 9pm on Sunday.
+
+## What it needs
+
+Three lists, and they get faster to produce every week. The jobs: what, where (town or zone is enough), how long, any time constraints, any parts or people it depends on. The people: names, what they can do, when they are off. The rules: how you like to route (cluster by area, big jobs first, never send the new guy alone to a commercial site). The rules go into the business brief under "how we schedule" so you do not retype them.
+
+<Prompt title="Draft the week">
+Here is my business brief, including how we schedule: [paste]
+
+Jobs for the week of [date], one per line with location, duration, constraints, and dependencies: [paste]
+
+People available, with skills and days off: [paste]
+
+Draft a schedule for Monday through Friday. For each day, list each person's jobs in order with a rough start time, grouped so drive time is sensible. Respect every stated constraint; if two constraints conflict, say so rather than choosing silently. Leave a buffer slot each afternoon for the job that runs long. Then list: any job you could not place and why, any day that looks overloaded, and any dependency (parts, permits, a second person) that must be confirmed before Monday.
+</Prompt>
+
+The draft is wrong somewhere. It always is, because it does not know that Marcus and the customer on Elm Street do not get along. Fix that by hand, and add the rule to the brief if it is a rule.
+
+<Callout kind="warn">
+Customer addresses are customer data. Most businesses are comfortable pasting a street name or a zone ("north side," "the Tempe cluster") for routing, and keeping house numbers out. Decide once, per Module 6, and write it into the recipe.
+</Callout>
+
+## The five-minute version
+
+Once the brief has your scheduling rules and the tool has seen a few weeks of your jobs, the prompt shrinks to "here are this week's jobs and who is out; draft the week." That is the state you are aiming for: the Sunday-night hour becomes a ten-minute review of a draft.
+
+<Worksheet title="Draft next week">
+- Write your scheduling rules into the business brief. Five to ten rules.
+- List next week's jobs with the details above. Pick your line on addresses.
+- Run the prompt. Fix what it got wrong. Note whether the fix is a rule.
+- Confirm every dependency it flagged before Monday.
+- Save the recipe as "Draft the week" with a CHECK line: "Confirm dependencies. Read the overloaded-days list."
+</Worksheet>
