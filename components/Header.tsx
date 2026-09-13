@@ -18,6 +18,7 @@ export async function Header() {
         <nav className="nav" aria-label="Primary">
           {email ? (
             <>
+              <Link href="/start">Start here</Link>
               <Link href="/library">Library</Link>
               <Link href="/account">Account</Link>
               {isAdmin(email) && <Link href="/admin">Admin</Link>}
