@@ -96,3 +96,16 @@ export const progress = pgTable(
   },
   (t) => [uniqueIndex("progress_user_lesson_idx").on(t.userEmail, t.lessonSlug)],
 );
+
+export const leads = pgTable("leads", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  email: text("email").notNull().unique(),
+  name: text("name"),
+  source: text("source").notNull().default("brief"),
+  business: text("business"),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "date" })
+    .notNull()
+    .defaultNow(),
+});
