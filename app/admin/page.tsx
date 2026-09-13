@@ -26,6 +26,11 @@ export default async function AdminPage({
     .from(schema.memberships)
     .orderBy(desc(schema.memberships.updatedAt))
     .limit(25);
+  const leads = await getDb()
+    .select()
+    .from(schema.leads)
+    .orderBy(desc(schema.leads.createdAt))
+    .limit(50);
 
   return (
     <div className="wrap">
@@ -90,6 +95,44 @@ export default async function AdminPage({
                 <td>{fmt(r.currentPeriodEnd)}</td>
                 <td>{fmt(r.grantedUntil)}</td>
                 <td>{fmt(r.updatedAt)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style={{ marginTop: "3rem" }}>Leads</h2>
+      <p className="muted">
+        People who requested the free business brief guide from adeptadvisors.com. Newest first.
+      </p>
+      <div style={{ overflowX: "auto" }}>
+        <table>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Business</th>
+              <th>Source</th>
+              <th>When</th>
+            </tr>
+          </thead>
+          <tbody>
+            {leads.length === 0 && (
+              <tr>
+                <td colSpan={5} className="muted">
+                  No leads yet.
+                </td>
+              </tr>
+            )}
+            {leads.map((l) => (
+              <tr key={l.id}>
+                <td>
+                  <a href={`mailto:${l.email}`}>{l.email}</a>
+                </td>
+                <td>{l.name ?? "n/a"}</td>
+                <td>{l.business ?? "n/a"}</td>
+                <td>{l.source}</td>
+                <td>{fmt(l.createdAt)}</td>
               </tr>
             ))}
           </tbody>
