@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="footer">
           <div className="wrap footer__inner">
             <span>© {new Date().getFullYear()} Adept Advisors · Phoenix, AZ</span>
-            <a href="https://adeptadvisors.com">adeptadvisors.com</a>
+            <span><a href="/privacy">Privacy</a> · <a href="https://adeptadvisors.com">adeptadvisors.com</a></span>
           </div>
         </footer>
       </body>
