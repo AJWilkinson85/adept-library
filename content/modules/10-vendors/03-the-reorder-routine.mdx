@@ -1,0 +1,52 @@
+---
+title: "The reorder routine"
+summary: "For anything you buy repeatedly: a monthly check that tells you what to order, from whom, and what it should cost, before you run out."
+minutes: 8
+order: 3
+---
+
+## Running out is a scheduling failure
+
+Nobody runs out of the thing they use every day because they could not afford it. They run out because nobody looked. The reorder routine is a five-minute monthly check, run against a list you maintain once, that says what needs ordering and flags when a price has moved.
+
+## The list
+
+One document, plain text or a spreadsheet, one line per item you buy repeatedly: what it is, who you buy it from, the last price you paid, how much you use in a typical month, and how long it takes to arrive. Twenty lines covers most small businesses. Build it once with help.
+
+<Prompt title="Build the reorder list">
+Here is my business brief: [paste]
+
+Here is a rough list of things we buy repeatedly, with whatever I remember about each: [paste, messy is fine]
+
+Turn this into a reorder list with one row per item and these columns: item, usual vendor, last price paid, typical monthly usage, lead time in days, and reorder point (the quantity on hand at which we should order, given usage and lead time, with a small buffer). Where I did not give a number, write "?" so I can fill it in. Keep it under one page.
+</Prompt>
+
+Fill in the question marks from your last few invoices. That is the only tedious part, and it is once.
+
+## The monthly check
+
+First Monday, or whenever you do the books. Count or estimate what is on hand for each line (thirty seconds per item) and run:
+
+<Prompt title="Monthly reorder check">
+Here is my reorder list: [paste]
+
+Here is what we have on hand today: [item: quantity, one per line]
+
+Tell me which items are at or below their reorder point, how much to order for each to cover the next two months, and from whom. Group by vendor so I can place one order per vendor. Then list any item where usage seems to have changed from the list (we are going through it faster or slower than the list says) so I can update the list. Under 150 words.
+</Prompt>
+
+<Callout kind="note">
+When the invoice arrives, compare the price to the list. If it moved more than a few percent, update the list and note the date. After a year, the list is also a record of who raised prices and when, which is useful the next time you compare quotes.
+</Callout>
+
+## Where it connects
+
+The reorder list is a section of your business brief, or lives next to it. The quotes comparison from the first lesson in this module feeds it: when you switch vendors, the list is where the change gets recorded. The Friday review from Module 9 is where "we're low on something" surfaces if the monthly check gets skipped.
+
+<Worksheet title="Build the list and run it once">
+- Write down everything you buy more than twice a year. Rough numbers.
+- Run the build prompt. Fill in the question marks from recent invoices.
+- Count what is on hand and run the monthly check.
+- Place the orders it recommends. Put the check on the calendar for next month.
+- Save both recipes to the library.
+</Worksheet>
